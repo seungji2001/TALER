@@ -12,11 +12,11 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
-import com.clone.practice.databinding.ActivityMainBinding
+import com.clone.practice.databinding.ActivityNumBinding
 
 
-class MainActivity : AppCompatActivity() {
-    lateinit var binding: ActivityMainBinding
+class NumActivity : AppCompatActivity() {
+    lateinit var binding: ActivityNumBinding
     private val PERMISSIONS_REQUEST_SEND_SMS = 2323
 
     override fun onCreate(savedInstanceState: Bundle?) {
