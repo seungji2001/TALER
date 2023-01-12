@@ -20,7 +20,7 @@
         <activity
             android:name=".CharActivity"
             android:exported="false" />
-        <!-- receiver 등록하기 -->
+        <!-- SMS등록 receiver 등록하기 -->
         <receiver
             android:name=".SMSReceiver"
             android:enabled="true"
