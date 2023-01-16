@@ -2,6 +2,7 @@ package com.example.taler
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.fragment.app.FragmentManager
 import com.example.taler.databinding.ActivityTalerMainBinding
 import com.google.android.material.bottomnavigation.BottomNavigationMenuView
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -13,7 +14,14 @@ class TalerMain : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         viewBinding = ActivityTalerMainBinding.inflate(layoutInflater)
         setContentView(viewBinding.root)
+
+        supportFragmentManager
+            .beginTransaction()
+            .replace(viewBinding.frameFragment.id,MainWordFragment())
+            .commitAllowingStateLoss()
     }
+
+
 
     /*private fun removeIcons(view: BottomNavigationView){
         var menuView:BottomNavigationMenuView

@@ -85,6 +85,7 @@ class Tutorial2Activity : AppCompatActivity() , TextToSpeech.OnInitListener {
                 .commitNowAllowingStateLoss()*/
             val intent = Intent(this, TalerMain::class.java)
             startActivity(intent)
+            mSoundPool.release()
         }
 
 
@@ -129,6 +130,14 @@ class Tutorial2Activity : AppCompatActivity() , TextToSpeech.OnInitListener {
             rotationYBy(360f)
         }.start()*/
 
+
+    }
+    override fun onStop() {
+        if (tts != null) {
+            tts!!.stop()
+            tts!!.shutdown()
+        }
+        super.onStop()
 
     }
     override fun onDestroy() {
