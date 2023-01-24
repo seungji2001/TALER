@@ -6,7 +6,10 @@
     <uses-permission android:name="android.permission.SEND_SMS" />
     <uses-permission android:name="android.permission.READ_SMS" />
     <uses-permission android:name="android.permission.RECEIVE_SMS" />
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -19,9 +22,33 @@
         android:theme="@style/Theme.Practice"
         tools:targetApi="31">
         <activity
-            android:name=".CharActivity"
+            android:name=".SelectTextRecordActivity"
             android:exported="false" />
-        <!-- SMS등록 receiver 등록하기 -->
+        <activity
+            android:name=".SelfWriteActivity"
+            android:exported="false"
+            android:label="직접 입력하세요!"
+            android:theme="@style/Theme.AppCompat.Light.Dialog" />
+        <activity
+            android:name=".EnrollBookActivity"
+            android:exported="false"
+            android:label="추천 동화 목록"
+            android:theme="@style/Theme.AppCompat.Light.Dialog" />
+        <activity
+            android:name=".StartActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".SelectBookActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CharActivity"
+            android:exported="false" /> <!-- SMS등록 receiver 등록하기 -->
         <receiver
             android:name=".SMSReceiver"
             android:enabled="true"
@@ -33,13 +60,10 @@
 
         <activity
             android:name=".NumActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:exported="true" />
+        <activity
+            android:name=".TalerMain"
+            android:exported="false" />
     </application>
 
 </manifest>

@@ -7,4 +7,15 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <!--메인 색상 오렌지 아니다 싶으면 변경-->
+    <color name="orange">#FF5E00</color>
+    <color name="orange_light">#FFBA85</color>
+    <color name="gray">#BDBDBD</color>
+
+    <color name="RandomColor1">#FF6263</color>
+    <color name="RandomColor2">#23C4ED</color>
+    <color name="RandomColor3">#38CC77</color>
+    <color name="RandomColor4">#D9D55B</color>
+    <color name="RandomColor5">#318BD1</color>
+    <color name="RandomColor6">#D345D0</color>
 </resources>
